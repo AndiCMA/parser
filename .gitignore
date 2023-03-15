@@ -1,0 +1,5 @@
+Runner/packages/*
+Runner/.vs/*
+*/**/bin/Debug
+Runner/Runner/obj
+*/**/obj/*
