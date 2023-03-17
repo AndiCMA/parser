@@ -1,32 +1,19 @@
 ﻿<Assigment>VariableDeclaration name:x ; type:int</Assigment>
+<Assigment>VariableDeclaration name:zy ; type:int</Assigment>
 <Assigment>VariableDeclaration name:y ; type:int ; value:10</Assigment>
 <Assigment>VariableDeclaration name:z ; type:int ; value:y</Assigment>
-<Assigment>VariableDeclaration name:s ; type:string ; value:"default"</Assigment>
+<Assigment>VariableDeclaration name:ss ; type:string ; value:"default"</Assigment>
 <Assigment>VariableSet name:x ; value:21</Assigment>
 <Assigment>VariableSet name:y ; value:z</Assigment>
-<Condition>
-	<ConditionStatement>
-		<Left>VariableName:x</Left>
-		<Operator>Equals</Operator>
-		<Right>Value:21</Right>
-	</ConditionStatement>
-	<ConditionTrue>
-		<Assigment>VariableSet name:x ; value:61</Assigment>
-	</ConditionTrue>
-	<ConditionFalse>
-		<Assigment>VariableSet name:x ; value:0</Assigment>
-	</ConditionFalse>
-</Condition>
+<Condition><ConditionStatement>IsEqual left:x ; right:y</ConditionStatement>
+<ConditionTrue><Assigment>VariableSet name:x ; value:61</Assigment></ConditionTrue>
+<ConditionFalse><Assigment>VariableSet name:x ; value:0</Assigment></ConditionFalse></Condition>
 <Assigment>VariableSet name:z ; value:3</Assigment>
-<Loop>
-	<LoopCondition>
-		<Left>VariableName:z</Left>
-		<Operator>Greater</Operator>
-		<Right>Value:0</Right>
-	</LoopCondition>
-	<LoopBody>
-		<Assigment>VariableSet name:z ; value:z-1</Assigment>
-	</LoopBody>
-</Loop>
+<Loop><ConditionStatement>IsEqual left:x ; right:y</ConditionStatement>
+<LoopBody><Assigment>VariableSet name:zy ; value:z-1</Assigment></LoopBody></Loop>
 <Assigment>VariableSet name:s ; value:"done"</Assigment>
-<Execution>sqrt value:x</Execution>
+<Assigment>VariableDeclaration name:final ; type:int </Assigment>
+<Assigment>VariableDeclaration name:final2 ; type:int</Assigment>
+<Assigment>VariableSet name:final ; value:y</Assigment>
+<Assigment>VariableSet name:final2 ; value:y-1</Assigment>
+<Execution>sqrt value:x </Execution>
